@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#121214"/>
+  <g stroke="#27272a" stroke-width="1">
+    <path d="M0 100h800M0 200h800M0 300h800M0 400h800M0 500h800"/>
+    <path d="M100 0v600M200 0v600M300 0v600M400 0v600M500 0v600M600 0v600M700 0v600"/>
+  </g>
+  <g transform="translate(400 300)">
+    <g fill="none" stroke="#2f6df6" stroke-width="2" opacity="0.7">
+      <rect x="-100" y="-70" width="200" height="140" rx="6"/>
+      <rect x="-70" y="-40" width="140" height="80" rx="4"/>
+    </g>
+  </g>
+  <text x="400" y="430" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" fill="#71717a">Results graph — add your image</text>
+</svg>

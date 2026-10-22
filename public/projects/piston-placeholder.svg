@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#121214"/>
+  <g stroke="#27272a" stroke-width="1">
+    <path d="M0 100h800M0 200h800M0 300h800M0 400h800M0 500h800"/>
+    <path d="M100 0v600M200 0v600M300 0v600M400 0v600M500 0v600M600 0v600M700 0v600"/>
+  </g>
+  <g transform="translate(400 300)">
+    <g fill="none" stroke="#2f6df6" stroke-width="2" opacity="0.6">
+      <ellipse cx="0" cy="0" rx="120" ry="90"/>
+      <ellipse cx="0" cy="0" rx="80" ry="60"/>
+    </g>
+    <g fill="none" stroke="#f0883e" stroke-width="2" opacity="0.7">
+      <rect x="-60" y="-40" width="120" height="80" rx="8"/>
+      <path d="M-60 -40 L0 0 L60 -40"/>
+    </g>
+  </g>
+  <text x="400" y="460" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" fill="#71717a">Piston simulation — add your image</text>
+  <text x="400" y="488" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="#52525b">Replace /public/projects/piston-placeholder.svg</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#121214"/>
+  <g stroke="#27272a" stroke-width="1">
+    <path d="M0 100h800M0 200h800M0 300h800M0 400h800M0 500h800"/>
+    <path d="M100 0v600M200 0v600M300 0v600M400 0v600M500 0v600M600 0v600M700 0v600"/>
+  </g>
+  <g transform="translate(400 300)">
+    <g fill="none" stroke="#2f6df6" stroke-width="2" opacity="0.7">
+      <circle r="90"/>
+      <path d="M0 -110v20M0 90v20M-110 0h20M90 0h20M-78-78l14 14M64 64l14 14M-78 78l14-14M64-64l14-14"/>
+    </g>
+  </g>
+  <text x="400" y="450" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" fill="#71717a">CAD model — add your render</text>
+</svg>

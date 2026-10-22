@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#141417"/>
+  <g fill="none" stroke="#27272a" stroke-width="2">
+    <rect x="40" y="40" width="320" height="320" rx="12"/>
+  </g>
+  <g transform="translate(200 200)" fill="none" stroke="#f0883e" stroke-width="3" opacity="0.8">
+    <rect x="-50" y="-50" width="100" height="100" rx="14"/>
+    <circle cx="0" cy="0" r="22"/>
+    <circle cx="34" cy="-34" r="6" fill="#f0883e"/>
+  </g>
+  <text x="200" y="330" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="#71717a">Instagram post — add image</text>
+</svg>
