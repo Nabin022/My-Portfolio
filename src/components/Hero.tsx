@@ -20,10 +20,10 @@ export function Hero() {
       <Gear className="absolute right-40 top-1/2 hidden md:block" size={160} opacity={0.08} spin="slower" color="#f0883e" />
       <Gear className="absolute -left-20 bottom-10 hidden md:block" size={200} opacity={0.07} spin="slower" />
 
-      <div className="container-content relative z-10 grid items-center gap-12 lg:grid-cols-[auto_1fr]">
+      <div className="container-content relative z-10 grid w-full items-center gap-12 lg:grid-cols-[minmax(280px,360px)_minmax(0,1fr)] lg:gap-16">
         {/* Profile photo */}
         <div className="relative mx-auto lg:mx-0 animate-fade-up">
-          <div className="relative h-56 w-56 sm:h-64 sm:w-64 lg:h-72 lg:w-72">
+          <div className="relative h-60 w-60 sm:h-72 sm:w-72 lg:h-80 lg:w-80">
             {/* Rotating ring */}
             <div className="absolute inset-0 rounded-full border border-accent/30 animate-spin-slow" />
             <div className="absolute -inset-2 rounded-full border border-line/10" />
@@ -31,7 +31,7 @@ export function Hero() {
             <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-line/10 bg-ink-800">
               <img
                 src={profile.photo}
-                alt="Nabin Sarkar profile photo placeholder"
+                alt="Nabin Sarkar, Mechanical Design Engineer"
                 className="h-full w-full object-cover"
                 loading="eager"
               />
@@ -42,24 +42,24 @@ export function Hero() {
               Open to opportunities
             </div>
           </div>
-          <p className="mt-4 text-center text-xs font-mono text-faint">
-            Replace <code className="text-accent-glow">/public/profile-placeholder.svg</code> with your photo
+          <p className="mt-4 text-center text-xs font-mono uppercase tracking-[0.18em] text-faint">
+            Mechanical Design · CAD · CAE
           </p>
         </div>
 
         {/* Text */}
         <div className="text-center lg:text-left" style={{ animationDelay: '0.1s' }}>
           <span className="eyebrow animate-fade-up">
-            <span className="h-px w-6 bg-accent/60" />
-            Mechanical Design · CAD/CAE · Creative
+            <span className="h-px w-8 bg-accent/60" />
+            Mechanical Design Engineering
           </span>
-          <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tightest text-strong text-balance animate-fade-up">
+          <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold tracking-tightest text-strong text-balance animate-fade-up sm:text-5xl lg:text-7xl">
             Nabin Sarkar
           </h1>
-          <p className="mt-4 max-w-2xl text-base sm:text-lg text-body leading-relaxed animate-fade-up">
+          <p className="mt-5 max-w-2xl text-lg font-medium leading-relaxed text-body animate-fade-up sm:text-xl">
             {profile.headline}
           </p>
-          <p className="mt-4 max-w-2xl text-sm sm:text-base text-muted leading-relaxed animate-fade-up">
+          <p className="mt-5 max-w-2xl text-sm leading-7 text-muted animate-fade-up sm:text-base">
             {profile.intro}
           </p>
 
@@ -71,7 +71,7 @@ export function Hero() {
           {/* Buttons */}
           <div className="mt-7 flex flex-wrap items-center justify-center lg:justify-start gap-3 animate-fade-up">
             <button onClick={() => scrollTo('projects')} className="btn-primary">
-              Explore My Work
+              View Projects
               <ArrowRight size={16} />
             </button>
             <a href={profile.resume} download className="btn-ember">

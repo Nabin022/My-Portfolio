@@ -53,24 +53,24 @@ export const projects: Project[] = [
         body: 'Define material properties for each candidate alloy, apply combustion-side thermal loads and cooling-side boundary conditions, mesh the piston geometry, and solve thermal followed by structural cases.',
       },
       {
-        heading: 'Results',
-        body: 'Replace this with your actual numerical results: peak temperatures, maximum equivalent stress, and total deformation for each material and coating configuration. Add comparison graphs in the gallery.',
+        heading: 'Verified finding',
+        body: 'The study reported a 23.4% reduction in total deformation for the coated A2618 piston configuration. Add the verified stress and temperature comparisons here as the project record is expanded.',
       },
       {
-        heading: 'Conclusion',
-        body: 'Summarize which material and coating combination offered the best thermo-mechanical performance and why, based on your simulation results.',
+        heading: 'Publication',
+        body: 'The findings were co-authored and published in the International Journal of Engineering Research & Technology (IJERT) in 2026.',
       },
     ],
     gallery: [
       {
         src: '/projects/piston-placeholder.svg',
         alt: 'Piston CAD model placeholder',
-        caption: 'Replace with your piston CAD model render.',
+        caption: 'Fusion 360 piston geometry — replace this gallery slot with the final model render.'
       },
       {
         src: '/projects/piston-results-placeholder.svg',
         alt: 'Thermal results placeholder',
-        caption: 'Replace with your thermal contour / results graph.',
+        caption: 'ANSYS Workbench results — replace this gallery slot with the final contour plot or comparison graph.'
       },
     ],
     links: [

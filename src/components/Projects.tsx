@@ -20,7 +20,11 @@ function linkIcon(kind: ProjectLink['kind']) {
 
 function ProjectCard({ project, onOpen }: { project: Project; onOpen: () => void }) {
   return (
-    <article className="card-surface group flex flex-col overflow-hidden transition-all hover:border-accent/30 hover:shadow-glow">
+    <article
+      className={`card-surface group flex flex-col overflow-hidden transition-all hover:border-accent/30 hover:shadow-glow ${
+        project.featured ? 'md:col-span-2 lg:col-span-2' : ''
+      }`}
+    >
       {project.image && (
         <div className="relative aspect-[16/10] overflow-hidden border-b border-line/10 bg-ink-800">
           <img
@@ -44,12 +48,17 @@ function ProjectCard({ project, onOpen }: { project: Project; onOpen: () => void
             </span>
           ))}
         </div>
-        <h3 className="mt-4 font-display text-lg font-semibold text-strong leading-snug">
+        {project.featured && (
+          <p className="mt-5 text-xs font-mono uppercase tracking-[0.18em] text-accent-glow">
+            Featured case study
+          </p>
+        )}
+        <h3 className="mt-3 font-display text-lg font-semibold text-strong leading-snug sm:text-xl">
           {project.title}
         </h3>
         <p className="mt-3 text-sm text-muted leading-relaxed flex-1">{project.summary}</p>
 
-        <div className="mt-5 flex flex-wrap items-center gap-3">
+        <div className="mt-6 flex flex-wrap items-center gap-3">
           <button onClick={onOpen} className="btn-ghost py-2 px-4 text-xs">
             <Images size={15} />
             View Details

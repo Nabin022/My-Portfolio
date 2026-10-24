@@ -47,7 +47,7 @@ function GraphicGallery({ onOpen }: { onOpen: (item: Lightbox) => void }) {
       </div>
 
       {items.length === 0 ? (
-        <EmptyState text="No items in this category yet — add some in src/data/creative.ts." />
+        <EmptyState text="This category is ready for your next portfolio upload." />
       ) : (
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {items.map((item) => (
@@ -126,8 +126,7 @@ function VideoGallery() {
               <div className="rounded-xl border border-dashed border-line/15 bg-ink-800 p-8 text-center">
                 <Video className="mx-auto text-ember" size={32} />
                 <p className="mt-3 text-sm text-muted">
-                  No embed URL set for this video. Add a YouTube/Vimeo embed URL to this item in
-                  <code className="mx-1 text-body">src/data/creative.ts</code> to enable playback.
+                  Add a YouTube or Vimeo link to this editable portfolio item to enable playback.
                 </p>
               </div>
             )}
@@ -143,7 +142,7 @@ function VideoGallery() {
 
 function PhotoGallery({ onOpen }: { onOpen: (item: Lightbox) => void }) {
   if (photography.length === 0) {
-    return <EmptyState text="No photographs yet — add some in src/data/creative.ts." />;
+    return <EmptyState text="Your photography collection is ready for its first upload." />;
   }
   return (
     <div className="columns-2 gap-4 sm:columns-3 lg:columns-4 [&>*]:mb-4">
@@ -211,8 +210,7 @@ function SocialBlock({ onOpen }: { onOpen: (item: Lightbox) => void }) {
         </div>
       </div>
       <p className="border-t border-line/10 px-5 py-3 text-center text-xs text-faint">
-        Static selection — not live-scraped Instagram posts. Add your own post images in
-        src/data/creative.ts.
+        Static selection — not live-scraped Instagram posts. Use the editable portfolio content to curate this selection.
       </p>
     </div>
   );
@@ -251,7 +249,7 @@ export function Creative() {
 
         <div ref={ref} className={`reveal ${visible ? 'is-visible' : ''} mt-10`}>
           {/* Tabs */}
-          <div className="flex flex-wrap gap-2 border-b border-line/10 pb-4">
+          <div className="flex flex-wrap gap-2 border-b border-line/10 pb-4" role="tablist" aria-label="Creative portfolio categories">
             {TABS.map((t) => {
               const Icon = t.icon;
               const isActive = tab === t.id;
@@ -259,10 +257,12 @@ export function Creative() {
                 <button
                   key={t.id}
                   onClick={() => setTab(t.id)}
-                  className={`inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition-all ${
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium transition-all ${
                     isActive
-                      ? 'bg-subtle/10 text-strong'
-                      : 'text-muted hover:text-strong hover:bg-subtle/5'
+                      ? 'border-ember/30 bg-ember/10 text-strong shadow-ember'
+                      : 'border-transparent text-muted hover:border-line/10 hover:bg-subtle/5 hover:text-strong'
                   }`}
                 >
                   <Icon size={16} className={isActive ? 'text-ember-glow' : ''} />
